@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DateFormatExample</string>
+    <string name="date_format">yyyy-MM-DD HH:mm:ss</string>
+</resources>

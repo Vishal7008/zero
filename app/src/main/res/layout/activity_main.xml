@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <io.github.rajendrarajaram.zero.TimeTextView
+        android:id="@+id/show_time"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        app:timeformat="@string/date_format"
+        android:layout_height="wrap_content"
+
+   />
+
+    <io.github.rajendrarajaram.zero.DateTextView
+        android:id="@+id/show_date"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        app:dateformat="@string/date_format"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>
