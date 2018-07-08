@@ -20,13 +20,13 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	         implementation 'com.github.rajendrarajaram:zero:v1.1'
+	         implementation 'com.github.rajendrarajaram:zero:v1.2'
 	}
 [![](https://jitpack.io/v/rajendrarajaram/zero.svg)](https://jitpack.io/#rajendrarajaram/zero)
 
 
 This library have two improtant Views Called **TimeTextView** and **DateTextView**
-Let discuss how to use them : 
+Let's discuss how to use it : 
 
 **TimeTextView**
 
@@ -38,8 +38,8 @@ Let discuss how to use them :
 ```
 
 TimeTextView will show the current time according to current time format of mobile that is 12 or 24 hour. 
-Any one can use the **time-stamp** coming from the server.
 
+We can use TimeTextView for the time comming from the server just we have to use timeformat (yyyy-MM-DD HH:mm:ss) and time stamp(2010-05-30 22:15:52)
 ```xml 
 <io.github.rajendrarajaram.zero.TimeTextView
         android:id="@+id/show_date"
@@ -73,6 +73,6 @@ Any one can use the **time-stamp** coming from the server.
    }
 ````
 
-DateTimeView is same as TimeTextView
+DateTimeView is used same as TimeTextView
 
 ![Screenshot](device-2018-07-08-144748.png)
