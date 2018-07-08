@@ -7,6 +7,32 @@ android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <TextView
+        android:text="Default Time"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <io.github.rajendrarajaram.zero.TimeTextView
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="Default Date"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <io.github.rajendrarajaram.zero.DateTextView
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="Custom Time"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <io.github.rajendrarajaram.zero.TimeTextView
         android:id="@+id/show_time"
@@ -16,6 +42,11 @@ android:orientation="vertical"
         android:layout_height="wrap_content"
 
    />
+    <TextView
+        android:text="Custom Date"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <io.github.rajendrarajaram.zero.DateTextView
         android:id="@+id/show_date"

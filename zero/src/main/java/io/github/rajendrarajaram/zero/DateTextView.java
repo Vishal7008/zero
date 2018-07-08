@@ -51,6 +51,7 @@ public class DateTextView  extends AppCompatTextView {
 
     public void setDate(String dateStr)
     {
+        if (inpuFormat==null)return;
         try {
             //DateFormat srcDf = new SimpleDateFormat("dd/MM/yyyy");
             Date date = inpuFormat.parse(dateStr);
@@ -75,7 +76,10 @@ public class DateTextView  extends AppCompatTextView {
         {
             TypedArray typedArray= getContext().obtainStyledAttributes(set, R.styleable.DateTextView);
             String dateInput = typedArray.getString(R.styleable.DateTextView_dateformat);
-
+if (dateInput==null)
+{
+    return;
+}
             inpuFormat  = new SimpleDateFormat(dateInput);
         }
 

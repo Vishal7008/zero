@@ -12,10 +12,11 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class TimeTextView  extends android.support.v7.widget.AppCompatTextView{
-private  Calendar calendar;
-private DateFormat inpuFormat;
-private  SimpleDateFormat outputFormat;
+public class TimeTextView extends android.support.v7.widget.AppCompatTextView {
+    private Calendar calendar;
+    private DateFormat inpuFormat;
+    private SimpleDateFormat outputFormat;
+
     public TimeTextView(Context context) {
         super(context);
         initTime();
@@ -24,10 +25,9 @@ private  SimpleDateFormat outputFormat;
 
     private void initTime() {
         calendar = Calendar.getInstance();
-        boolean is =android.text.format.DateFormat.is24HourFormat(getContext());
-         outputFormat  = new SimpleDateFormat(Constants.Time.TwelveHr.SORT);
-        if (is)
-        {
+        boolean is = android.text.format.DateFormat.is24HourFormat(getContext());
+        outputFormat = new SimpleDateFormat(Constants.Time.TwelveHr.SORT);
+        if (is) {
             outputFormat.applyPattern(Constants.Time.TwentyFourHr.SORT);
         }
 
@@ -39,7 +39,7 @@ private  SimpleDateFormat outputFormat;
         initAttrs(attrs);
         initTime();
 
-            }
+    }
 
     public TimeTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
@@ -47,8 +47,13 @@ private  SimpleDateFormat outputFormat;
         initTime();
     }
 
-    public void setDate(String dateStr)
-    {
+    public void setDate(String dateStr) {
+
+        if (inpuFormat==null)
+        {
+            return;
+        }
+
         try {
             //DateFormat srcDf = new SimpleDateFormat("dd/MM/yyyy");
             Date date = inpuFormat.parse(dateStr);
@@ -56,31 +61,27 @@ private  SimpleDateFormat outputFormat;
             // format the date into another format
 
             dateStr = outputFormat.format(date);
-             setText(dateStr);
-        }
+            setText(dateStr);
+        } catch (ParseException e) {
 
-        catch (ParseException e) {
+            e.printStackTrace();
 
-        e.printStackTrace();
-
-    }
-
-    }
-
-    private  void initAttrs(AttributeSet set)
-    {
-        if (set!=null)
-        {
-         TypedArray typedArray= getContext().obtainStyledAttributes(set, R.styleable.TimeTextView);
-String dateInput = typedArray.getString(R.styleable.TimeTextView_timeformat);
-
-inpuFormat  = new SimpleDateFormat(dateInput);
         }
 
     }
 
+    private void initAttrs(AttributeSet set) {
+        if (set != null) {
+            TypedArray typedArray = getContext().obtainStyledAttributes(set, R.styleable.TimeTextView);
+            String dateInput = typedArray.getString(R.styleable.TimeTextView_timeformat);
 
+            if (dateInput==null)
+                return;
 
+                inpuFormat = new SimpleDateFormat(dateInput);
+        }
+
+    }
 
 
 }
