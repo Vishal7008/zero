@@ -74,3 +74,5 @@ Any one can use the **time-stamp** coming from the server.
 ````
 
 DateTimeView is same as TimeTextView
+
+![Screenshot](device-2018-07-08-144748.png)
