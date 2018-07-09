@@ -73,6 +73,21 @@ We can use TimeTextView for the time comming from the server just we have to use
    }
 ````
 
-DateTimeView is used same as TimeTextView
+Here I define some important  **date format** and **time type**  i am going to describe 
+
+
+| Date Format | Date |
+|----------|----------|
+| Full      | Monday , july 9 2018     |
+| Long      |  july 9 2018     |
+| Medium     | jul 9 2018    |
+| Short     | 9/7/2018   |
+
+
+
+
+
+
+
 
 ![Screenshot](device-2018-07-08-144748.png)
