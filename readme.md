@@ -25,7 +25,7 @@ Step 2. Add the dependency
 [![](https://jitpack.io/v/rajendrarajaram/zero.svg)](https://jitpack.io/#rajendrarajaram/zero)
 
 
-This library have two improtant Views Called **TimeTextView** and **DateTextView**
+This library have two important Views Called **TimeTextView** and **DateTextView**
 Let's discuss how to use it : 
 
 **TimeTextView**
@@ -39,7 +39,7 @@ Let's discuss how to use it :
 
 TimeTextView will show the current time according to current time format of mobile that is 12 or 24 hour. 
 
-We can use TimeTextView for the time comming from the server just we have to use timeformat (yyyy-MM-DD HH:mm:ss) and time stamp(2010-05-30 22:15:52)
+We can use TimeTextView for the time coming from the server just we have to use timeformat (yyyy-MM-DD HH:mm:ss) and time stamp(2010-05-30 22:15:52)
 ```xml 
 <io.github.rajendrarajaram.zero.TimeTextView
         android:id="@+id/show_date"
